@@ -3,7 +3,7 @@
 .thumb
 
 Crit:
-lsl     r0,r0,#0x0
+lsl     r0,r0,#0x0      @ NOP just for fun (:
 push    {r4-r6,r14}
 mov     r2,r0
 mov     r6,r1
