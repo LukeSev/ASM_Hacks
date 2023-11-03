@@ -1,5 +1,5 @@
-@FE8 Perfect Luck
-@Originally by Scraiza, adapted to FE8 by osfe
+@ FE8 Perfect Luck
+@ By osfe, with Enemy Flag checking logic taken from Scraiza's FE7 patch 
 .thumb
 
 Crit:
