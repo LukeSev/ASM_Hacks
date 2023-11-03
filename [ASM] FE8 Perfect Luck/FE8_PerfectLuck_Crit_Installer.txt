@@ -1,0 +1,25 @@
+// Perfect Luck Installer for FE8
+// Originally by Scraiza, adapted for this patch by osfe
+#ifndef _FE8_
+    ERROR "You're not assembling to an FE8 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+#ifndef FreeSpace
+    #define FreeSpace 0xB5A610  /// Arbitrarily chosen to be somewhere after the Perfect Hit Luck Assembly
+    ORG FreeSpace
+#endif
+
+PUSH
+
+ORG $2AC90
+jumpToHack(FE8_PerfectLuck_Crit)
+
+POP
+
+PUSH
+
+FE8_PerfectLuck_Crit:
+#incbin "FE8_PerfectLuck_Crit.dmp"
