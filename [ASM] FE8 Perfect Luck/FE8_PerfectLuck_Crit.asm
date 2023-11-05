@@ -21,7 +21,7 @@ mov     r2,#0x80        @ Start checking for enemy
 and     r3,r2
 cmp     r3,#0x80        
 beq     EnemyCritCheck  @ Enemy uses different crit calculation (floor instead of ceil)
-cmp     r1,#0x0         @ For Player Unit, crit 100 unless crit is zero (ceil func kinda I'm too lazy to google if I'm using the term right. Also enjoy the insanely long line I'm sure this is fun to scroll over to read. Y'know I literally had a professor in my Systems Programming class that docked us points if we went over 80 chars in a line. Look how that turned out lol)
+cmp     r1,#0x0         @ For Player Unit, crit 100 unless crit is zero (ceil func kinda I'm too lazy to google if I'm using the term right)
 ble     NoCrit
 b       PerfectCrit
 
