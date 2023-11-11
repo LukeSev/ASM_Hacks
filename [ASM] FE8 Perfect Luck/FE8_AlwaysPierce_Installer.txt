@@ -1,0 +1,21 @@
+// AlwaysPierce Installer for FE8
+// Makes it so Pierce always procs
+// by osfe
+#ifndef _FE8_
+    ERROR "You're not assembling to an FE8 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+#ifndef FreeSpace
+    #define FreeSpace 0xB5A65A
+    ORG FreeSpace
+#endif
+
+PUSH
+
+ORG $2B2B4
+SHORT 0x2064    // Always load 100 as level for Pierce Check
+
+POP
